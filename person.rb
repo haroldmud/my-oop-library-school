@@ -14,4 +14,9 @@ class Person
     @age = age
     @parent_permission = parent_permission
   end
+
+  def setter(name, age)
+    @name = name
+    @age = age
+  end
 end
