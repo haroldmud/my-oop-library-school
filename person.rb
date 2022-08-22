@@ -27,4 +27,8 @@ class Person
       'age' => @age
     }
   end
+
+  def is_of_age?
+    age > 18
+  end
 end
