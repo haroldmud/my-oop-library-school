@@ -19,4 +19,12 @@ class Person
     @name = name
     @age = age
   end
+
+  def getter
+    {
+      'id' => @id,
+      'name' => @name,
+      'age' => @age
+    }
+  end
 end
