@@ -1,8 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# OOP school library project
 
-> Description the project.
+> Project 1: add Person, Student, and Teacher classes.
+> Project 2: use the "Decorator" design pattern.
+> Project 3: set up associations.
+> Project 4: add basic UI.
+> Project 5: refactor your code.
+> Project 6: preserve data.
+> Project 7: unit tests.
 
 
 ## Built With
@@ -42,15 +48,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@haroldmud](https://github.com/haroldmud)
+- Twitter: [@mudosaarnold](https://twitter.com/mudosaarnold)
+- LinkedIn: [haroldmudosa](https://linkedin.com/in/haroldmusosa)
 
 ## 🤝 Contributing
 
