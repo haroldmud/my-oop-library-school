@@ -2,13 +2,7 @@
 
 # OOP school library project
 
-> Project 1: add Person, Student, and Teacher classes.
-> Project 2: use the "Decorator" design pattern.
-> Project 3: set up associations.
-> Project 4: add basic UI.
-> Project 5: refactor your code.
-> Project 6: preserve data.
-> Project 7: unit tests.
+> The app that we will create will allow us to Add new students or teachers, Add new books and Save records of who borrowed a given book and when. And all of this will be built in a beautiful and well-organized way!
 
 
 ## Built With
