@@ -64,6 +64,10 @@ Lint/DefEndAlignment:
   Enabled: false
 Layout/IndentationWidth:
   Enabled: false
+  Enabled: false
+Naming/VariableName:
+  Enabled: false
+Naming/MethodName:
 # Layout/TrailingBlankLines:
 #   Enabled: false
 Layout/SpaceAfterMethodName:

@@ -26,4 +26,3 @@ class TrimmerDecorator < Base
     end
   end
 end
-
