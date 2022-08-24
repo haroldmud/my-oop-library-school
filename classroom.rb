@@ -7,5 +7,16 @@ class Classroom
     @label = label
   end
 
+  def getter 
+    {
+      'label' => @label
+    }
+  end
+
+  def setter(label)
+    @label = label
+  end
+
+  
   
 end
