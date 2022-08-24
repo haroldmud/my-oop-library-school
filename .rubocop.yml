@@ -63,7 +63,8 @@ Layout/IndentationWidth:
   Enabled: false
 Naming/VariableName:
   Enabled: false
-# Naming/MethodName:
+Naming/MethodName:
+  Enabled: false
 # Layout/TrailingBlankLines:
 #   Enabled: false
 Layout/SpaceAfterMethodName:
