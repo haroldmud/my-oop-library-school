@@ -32,7 +32,6 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
-
 Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:
@@ -51,8 +50,6 @@ Style/HashTransformKeys:
 Style/HashTransformValues:
   Enabled: false
 Layout/EmptyLineBetweenDefs:
-  Enabled: false
-Layout/TrailingWhitespace:
   Enabled: false
 Layout/TrailingWhitespace:
   Enabled: false
