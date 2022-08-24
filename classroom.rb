@@ -30,4 +30,10 @@ class Book
     @author = author
   end
 
+  def add_rental(date)
+    new.Rental(date)
+  end
+end
+
+
   
