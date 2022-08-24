@@ -17,6 +17,9 @@ class Classroom
     @label = label
   end
 
-  
-  
+  def add_student
+    new.Student(@label)
+  end
+end
+
 end
