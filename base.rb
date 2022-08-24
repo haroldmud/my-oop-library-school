@@ -1,6 +1,6 @@
 require_relative './nameable'
 
-class Base < Nameable
+class Base 
   def initialize(nameable)
     @nameable = nameable
     super(nameable)
@@ -9,5 +9,7 @@ class Base < Nameable
   def correct_name
     @nameable.correct_name
   end
+
+  def
 end
 
