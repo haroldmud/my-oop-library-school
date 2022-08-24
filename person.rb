@@ -1,7 +1,8 @@
 require_relative './student'
 require_relative './teacher'
+require_relative './nameable'
 
-class Person
+class Person < Nameable
   extend Student
   extend Teacher
 
@@ -34,7 +35,19 @@ class Person
 
   def can_use_service?
     @parent_permission == true || isof_age?
+  end 
+
+  def correct_name
+    @name
   end
 
   private :isof_age?
 end
+
+
+person = Person.new(22, 'maximilianus')
+  person.correct_name
+  capitalizePerson = capitalizeDecorator.new(person)
+  capitalizedPerson.correct_name
+  capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
+  capitalizedTrimmedPerson.correct_name

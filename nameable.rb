@@ -6,6 +6,6 @@ class Nameable
   end
 
   def correct_name
-    raise NotImplementedErro
+    raise NotImplementedError, "{#self.class} has an unexpected partial read from random method '#_method_'"
   end
 end
