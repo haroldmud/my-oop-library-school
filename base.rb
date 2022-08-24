@@ -1,6 +1,6 @@
 require_relative './nameable'
 
-class Base 
+class Base < Nameable
   def initialize(nameable)
     @nameable = nameable
     super(nameable)
@@ -10,6 +10,10 @@ class Base
     @nameable.correct_name
   end
 
-  def
+  class CapitalizeDecorator < Base
+    def correct_name
+      @nameable.correct_name.capitalize
+    end
+  end
 end
 
