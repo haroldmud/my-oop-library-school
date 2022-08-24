@@ -1,7 +1,6 @@
 require_relative './student'
 
 class Classroom
-
   attr_accessor :label
 
   def initialize(label)
@@ -24,7 +23,6 @@ class Classroom
 end
 
 class Book
-
   attr_accessor :title, :author
 
   def initialize(title, author)
@@ -38,7 +36,6 @@ class Book
 end
 
 class Rental
-
   attr_accessor :date, :person_data, :book_data
 
   def initialize(date, person_obj, book_obj)
