@@ -53,3 +53,4 @@ class Rental
     new.Person(age, name, parent_permission)
   end
 end
+  
