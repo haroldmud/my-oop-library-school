@@ -1,6 +1,6 @@
 require_relative './person'
 
-module Teacher < Person
+class Teacher < Person
   def initialize(specialization, age, name, profession)
     super(name, age, profession)
     @specialization = specialization
