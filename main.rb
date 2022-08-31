@@ -84,4 +84,3 @@ end
 
 main = Main.new
 main.starting
-end

@@ -21,5 +21,4 @@ class Classroom
     new.Student(@label)
   end
 end
-
   
