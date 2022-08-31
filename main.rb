@@ -1,0 +1,76 @@
+require_relative './app'
+
+class Main
+  def initialize
+    @app = App.new
+  end
+
+  def three1(num)
+    if num == '1'
+      @app.list_books
+      starting
+    else
+      ''
+    end
+  end
+
+  def three2(num)
+    if num == '2'
+      @app.list_persons
+      starting
+    else
+      ''
+    end
+  end
+
+  def three4(num)
+    if num == '4'
+      @app.create_book
+      starting
+    else
+      ''
+    end
+  end
+
+  def three5(num)
+    if num == '5'
+      @app.create_rental
+      starting
+    else
+      ''
+    end
+  end
+
+  def three6(num)
+    if num == '6'
+      @app.list_rental_by_id
+      starting
+    else
+      ''
+    end
+  end
+
+  def three7(num)
+    if num == '7'
+      puts 'Exit'
+    else
+      ''
+    end
+  end
+
+  def inputs(int)
+    three1(int)
+    three2(int)
+    three3(int)
+    three4(int)
+    three5(int)
+    three6(int)
+    three7(int)
+  end
+
+  
+end
+
+main = Main.new
+main.starting
+end
