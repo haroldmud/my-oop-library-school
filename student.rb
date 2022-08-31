@@ -1,6 +1,11 @@
-module Student
-  def initialize(classroom, age, parent_permission: true, name: 'Unknown')
-    super(name, age, parent_permission)
+require_relative './person'
+
+class Student < Person
+
+  attr_accessor :classroom
+
+  def initialize(classroom, age,profession, parent_permission)
+    super(name, age, profession)
     @classroom = classroom
   end
 
@@ -8,7 +13,7 @@ module Student
     "¯\(ツ)/¯"
   end
 
-  def add_to_classroom
-    new.classroom(@classroom)
+  def add_to_classroom(label)
+    new.classroom(label)
   end
 end
