@@ -7,7 +7,6 @@ class Person < Nameable
 
   attr_reader :id
   attr_writer :name, :age, :parent_permission
-  
   def initialize(age, name, _profession, parent_permission: true)
     super(self)
     @id = Random.rand(1..1000)
@@ -35,7 +34,7 @@ class Person < Nameable
 
   def can_use_service?
     @parent_permission == true || isof_age?
-  end 
+  end
 
   def correct_name
     @name

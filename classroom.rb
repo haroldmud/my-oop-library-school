@@ -7,7 +7,7 @@ class Classroom
     @label = label
   end
 
-  def getter 
+  def getter
     {
       'label' => @label
     }
@@ -21,4 +21,3 @@ class Classroom
     new.Student(@label)
   end
 end
-  
