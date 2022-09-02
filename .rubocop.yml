@@ -50,6 +50,5 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
-Style/BracesAroundHashParameters:
-  Enabled: false
-  
+# Style/BracesAroundHashParameters:
+#   Enabled: false
