@@ -9,6 +9,8 @@ AllCops:
 
 Layout/LineLength:
   Max: 125
+Layout/AlignHash:
+  Enable: false
 Metrics/MethodLength:
   Max: 20
 Metrics/AbcSize:
