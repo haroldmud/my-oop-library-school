@@ -138,12 +138,18 @@ class App
     puts 'Enter a person Id to see he\'s rentals'
     printf 'Id:'
     id = gets.chomp
-    find_rentals = @rental_arr.select { |rental| rental[:person][:id] == id }
+    find_rentals = rentals_list.select { |rental| rental['person']['id'] == id }
     puts 'Rentals:'
     find_rentals.each_with_index do |rental, idx|
-      puts "#{idx + 1}) Name: #{rental[:person][:name]},
-        Book: #{rental[:book][:title]} Date: #{rental[:date]}"
+      puts "#{idx + 1}) Name: #{rental['person']['name']},
+      Book: #{rental['book']['title']} Date: #{rental['date']}"
     end
     puts ' '
   end
+
+  def book_arrz
+    @book_arr
+  end
+
+  attr_reader :person_arr, :rental_arr
 end
