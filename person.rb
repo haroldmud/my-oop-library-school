@@ -1,15 +1,8 @@
-require_relative './student'
-require_relative './teacher'
-require_relative './nameable'
-
+require_relative './nemable'
+require_relative './base'
+# Person class
 class Person < Nameable
-  extend Student
-  extend Teacher
-
-  attr_reader :id
-  attr_writer :name, :age, :parent_permission
-  
-  def initialize(age, name, parent_permission: true)
+  def initialize(age, name, _profession, parent_permission: true)
     super(self)
     @id = Random.rand(1..1000)
     @name = name
@@ -17,12 +10,10 @@ class Person < Nameable
     @parent_permission = parent_permission
   end
 
-  def setter(name, age)
-    @name = name
-    @age = age
-  end
+  attr_reader :id
+  attr_accessor :name, :age, :parent_permission
 
-  def getter
+  def get
     {
       'id' => @id,
       'name' => @name,
@@ -30,13 +21,18 @@ class Person < Nameable
     }
   end
 
-  def isof_age?
-    age > 18
+  def set(name, age)
+    @name = name
+    @age = age
   end
 
-  def can_use_service?
+  def isof_age?
+    @age > 18
+  end
+
+  def can_use_services?
     @parent_permission == true || isof_age?
-  end 
+  end
 
   def correct_name
     @name
@@ -55,10 +51,3 @@ class Person < Nameable
 
   private :isof_age?
 end
-
-person = Person.new(22, 'maximilianus')
-  person.correct_name
-  capitalizedPerson = CapitalizeDecorator.new(person)
-  capitalizedPerson.correct_name
-  capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-  capitalizedTrimmedPerson.correct_name

@@ -8,7 +8,9 @@ AllCops:
   DisplayCopNames: true
 
 Layout/LineLength:
-  Max: 120
+  Max: 125
+Layout/HashAlignment:
+  Enable: false
 Metrics/MethodLength:
   Max: 20
 Metrics/AbcSize:
@@ -32,6 +34,7 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+
 Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:
@@ -49,26 +52,5 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
-Layout/EmptyLineBetweenDefs:
-  Enabled: false
-Layout/TrailingWhitespace:
-  Enabled: false
-Layout/IndentationStyle:
-  Enabled: false
-Layout/IndentationConsistency:
-  Enabled: false
-Lint/DefEndAlignment:
-  Enabled: false
-Layout/IndentationWidth:
-  Enabled: false
-Naming/VariableName:
-  Enabled: false
-Naming/MethodName:
-  Enabled: false
-# Layout/TrailingBlankLines:
+# Style/BracesAroundHashParameters:
 #   Enabled: false
-Layout/SpaceAfterMethodName:
-  Enabled: false
-Lint/DefEndAlignment:
-  Enabled: false 
-  

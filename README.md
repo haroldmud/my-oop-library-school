@@ -9,6 +9,18 @@
 
 - Ruby
 
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+- copy this link `https://github.com//haroldmud/my-oop-library-school`.
+- get the directory that you want to clone the repository.
+- open the command prompt in this directory.
+- write `git clone https://github.com/haroldmud/my-oop-library-school`.
+- go to the repository folder in your command prompt `my-oop-library-school`.
+- Open terminal in that folder run `bundle install`.
+- run `ruby solver.rb`.
+- For Testing run `rspec spec spec/solver_spec.rb`.
 
 ## Authors
 
@@ -17,6 +29,15 @@
 - GitHub: [@haroldmud](https://github.com/haroldmud)
 - Twitter: [@mudosaarnold](https://twitter.com/mudosaarnold)
 - LinkedIn: [haroldmudosa](https://linkedin.com/in/haroldmusosa)
+
+## Authors
+
+👤 **Author2**
+
+- GitHub: [@haroldmud](https://github.com/haroldmud)
+- Twitter: [@mudosaarnold](https://twitter.com/mudosaarnold)
+- LinkedIn: [haroldmudosa](https://linkedin.com/in/haroldmusosa)
+
 
 ## 🤝 Contributing
 
