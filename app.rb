@@ -32,23 +32,49 @@ class App
     age = gets.chomp
     printf 'specialization:'
     specialization = gets.chomp
-    my_hash_one = { id: @id.to_s, name: name, age: age, profession: 'Teacher' }
-    @id += 1
+    my_hash_one = { 'id' => @id.to_s, 'name' => name, 'age' => age, 'profession' => 'Teacher' }
+    @id = rand(1...1000)
     @person_arr.push(my_hash_one)
     Teacher.new(specialization, age, name, 'Teacher')
     puts "Name: #{name} specialzation:#{specialization} Age: #{age}  Added successfuly!"
   end
 
   def list_books
-    @book_arr.each_with_index do |book, key|
-      puts "#{key}) Title: #{book[:title]}, Author: #{book[:author]}"
+    File.new('books.json', 'w+') unless Dir.glob('*.json').include? 'books.json'
+
+    if File.empty?('books.json')
+      book_list = []
+    else
+      data = File.read('books.json').split
+      book_list = JSON.parse(data.join)
+    end
+
+    @book_arr.each do |book|
+      book_list.push(book)
+    end
+    @books_list = book_list
+    book_list.each_with_index do |book, key|
+      puts "#{key}) Title: #{book['title']}, Author: #{book['author']}"
     end
     puts ' '
   end
 
   def list_persons
-    @person_arr.each_with_index do |perso, key|
-      puts "#{key}) [#{perso[:profession]}] Name: #{perso[:name]} ID: #{perso[:id]} Age: #{perso[:age]}"
+    File.new('person.json', 'w+') unless Dir.glob('*.json').include? 'person.json'
+
+    if File.empty?('person.json')
+      person_list = []
+    else
+      data = File.read('person.json').split
+      person_list = JSON.parse(data.join)
+    end
+
+    @person_arr.each do |perso|
+      person_list.push(perso)
+    end
+    @persons_list = person_list
+    person_list.each_with_index do |perso, key|
+      puts "#{key}) [#{perso['profession']}] Name: #{perso['name']} ID: #{perso['id']} Age: #{perso['age']}"
     end
     puts ' '
   end
@@ -58,7 +84,7 @@ class App
     title = gets.chomp
     printf 'Author:'
     author = gets.chomp
-    my_hash = { title: title, author: author }
+    my_hash = { 'title' => title, 'author' => author }
     @book_arr.push(my_hash)
     puts 'Book created successfuly'
     puts ' '
@@ -82,14 +108,14 @@ class App
     puts 'Please select a book from the following list by number :'
     list_books
     book = gets.chomp
-    book_to_add = @book_arr[book.to_i]
+    book_to_add = @books_list[book.to_i]
     puts 'Please select a person from the following list by number:'
     list_persons
     person_id = gets.chomp
-    person_to_add = @person_arr[person_id.to_i]
+    person_to_add = @persons_list[person_id.to_i]
     printf 'Date:'
     date_to_add = gets.chomp
-    my_hash_two = { date: date_to_add, book: book_to_add, person: person_to_add }
+    my_hash_two = { 'date' => date_to_add, 'book' => book_to_add, 'person' => person_to_add }
     @rental_arr.push(my_hash_two)
     puts 'Rental created successfuly'
     puts ' '
