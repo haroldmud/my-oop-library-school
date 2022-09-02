@@ -122,6 +122,19 @@ class App
   end
 
   def list_rental_by_id
+    File.new('rentals.json', 'w+') unless Dir.glob('*.json').include? 'rentals.json'
+
+    if File.empty?('rentals.json')
+      rentals_list = []
+    else
+      data = File.read('rentals.json').split
+      rentals_list = JSON.parse(data.join)
+    end
+
+    @rental_arr.each do |rental|
+      rentals_list.push(rental)
+    end
+
     puts 'Enter a person Id to see he\'s rentals'
     printf 'Id:'
     id = gets.chomp
