@@ -1,4 +1,5 @@
 require 'json'
+
 require_relative 'app'
 
 # Options to choose
@@ -68,6 +69,7 @@ class Options
     end
   end
 
+  # #####################################Store
   def books_store
     File.new('books.json', 'w+') unless Dir.glob('*.json').include? 'books.json'
 

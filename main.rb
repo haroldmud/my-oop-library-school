@@ -1,5 +1,5 @@
 require_relative 'options'
-
+# Main class handle all methods
 class Main
   def initialize
     @option = Options.new

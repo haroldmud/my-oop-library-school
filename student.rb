@@ -1,18 +1,18 @@
-require_relative './person'
-
+require_relative 'person'
+# Student inherit to person
 class Student < Person
-  attr_accessor :classroom
-
-  def initialize(classroom, age, profession)
-    super(name, age, profession)
+  def initialize(classroom, age, name, profession, _parent_permission)
+    super(age, name, profession)
     @classroom = classroom
   end
+
+  attr_accessor :classroom
 
   def play_hooky
     "¯\(ツ)/¯"
   end
 
   def add_to_classroom(label)
-    new.classroom(label)
+    new.Classroom(label)
   end
 end

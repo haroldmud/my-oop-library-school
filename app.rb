@@ -1,5 +1,6 @@
 require 'json'
 
+# Console entry point
 class App
   def initialize
     @book_arr = []
@@ -20,9 +21,8 @@ class App
     true_permission = permission == 'y' || 'yes' || 'Y'
     puts "Name: #{name} Age: #{age} created successfully"
     @id = rand(1...1000)
-    the_hash = { 'id' => @id.to_s, 'name' => name, 'age' => age, 'profession' => 'Student', 'permission' => true_permission }
-    @person_arr.push(the_hash)
-    Student.new('Year 1', age, name, 'Student', true_permission)
+    my_hash = { 'id' => @id.to_s, 'name' => name, 'age' => age, 'profession' => 'Student', 'permission' => true_permission }
+    @person_arr.push(my_hash)
   end
 
   def add_teacher
@@ -32,10 +32,9 @@ class App
     age = gets.chomp
     printf 'specialization:'
     specialization = gets.chomp
-    my_hash_one = { 'id' => @id.to_s, 'name' => name, 'age' => age, 'profession' => 'Teacher' }
     @id = rand(1...1000)
+    my_hash_one = { 'id' => @id.to_s, 'name' => name, 'age' => age, 'profession' => 'Teacher' }
     @person_arr.push(my_hash_one)
-    Teacher.new(specialization, age, name, 'Teacher')
     puts "Name: #{name} specialzation:#{specialization} Age: #{age}  Added successfuly!"
   end
 
@@ -56,6 +55,7 @@ class App
     book_list.each_with_index do |book, key|
       puts "#{key}) Title: #{book['title']}, Author: #{book['author']}"
     end
+
     puts ' '
   end
 
@@ -84,8 +84,8 @@ class App
     title = gets.chomp
     printf 'Author:'
     author = gets.chomp
-    my_hash = { 'title' => title, 'author' => author }
-    @book_arr.push(my_hash)
+    my_hash_two = { 'title' => title, 'author' => author }
+    @book_arr.push(my_hash_two)
     puts 'Book created successfuly'
     puts ' '
   end
@@ -115,8 +115,8 @@ class App
     person_to_add = @persons_list[person_id.to_i]
     printf 'Date:'
     date_to_add = gets.chomp
-    my_hash_two = { 'date' => date_to_add, 'book' => book_to_add, 'person' => person_to_add }
-    @rental_arr.push(my_hash_two)
+    my_hash_three = { 'date' => date_to_add, 'book' => book_to_add, 'person' => person_to_add }
+    @rental_arr.push(my_hash_three)
     puts 'Rental created successfuly'
     puts ' '
   end
@@ -142,7 +142,7 @@ class App
     puts 'Rentals:'
     find_rentals.each_with_index do |rental, idx|
       puts "#{idx + 1}) Name: #{rental['person']['name']},
-      Book: #{rental['book']['title']} Date: #{rental['date']}"
+        Book: #{rental['book']['title']} Date: #{rental['date']}"
     end
     puts ' '
   end
