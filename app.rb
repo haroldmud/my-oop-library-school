@@ -19,8 +19,8 @@ class App
     permission = gets.chomp
     true_permission = permission == 'y' || 'yes' || 'Y'
     puts "Name: #{name} Age: #{age} created successfully"
-    the_hash = { id: @id.to_s, name: name, age: age, profession: 'Student', permission: true_permission }
-    @id += 1
+    @id = rand(1...1000)
+    the_hash = { 'id' => @id.to_s, 'name' => name, 'age' => age, 'profession' => 'Student', 'permission' => true_permission }
     @person_arr.push(the_hash)
     Student.new('Year 1', age, name, 'Student', true_permission)
   end
