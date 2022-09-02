@@ -20,8 +20,9 @@ class App
     permission = gets.chomp
     true_permission = permission == 'y' || 'yes' || 'Y'
     puts "Name: #{name} Age: #{age} created successfully"
+    the_hash = { 'id' => @id.to_s, 'name' => name, 'age' => age, 'profession' => 'Student' }
     @id += 1
-    @person_arr.push({ 'id' => @id.to_s, 'name' => name, 'age' => age, 'profession' => 'Student' })
+    @person_arr.push(the_hash)
     Student.new('Year 1', age, name, 'Student', true_permission)
   end
 
@@ -32,8 +33,9 @@ class App
     age = gets.chomp
     printf 'specialization:'
     specialization = gets.chomp
+    my_hash_one = { 'id' => @id.to_s, 'name' => name, 'age' => age, 'profession' => 'Teacher' }
     @id += 1
-    @person_arr.push({ 'id' => @id.to_s, 'name' => name, 'age' => age, 'profession' => 'Teacher' })
+    @person_arr.push(my_hash_one)
     Teacher.new(specialization, age, name, 'Teacher')
     puts "Name: #{name} specialzation:#{specialization} Age: #{age}  Added successfuly!"
   end
@@ -50,7 +52,8 @@ class App
     title = gets.chomp
     printf 'Author:'
     author = gets.chomp
-    @book_arr.push({ 'title' => title, 'author' => author })
+    my_hash = { 'title' => title, 'author' => author }
+    @book_arr.push(my_hash)
     puts 'Book created successfuly'
     puts ' '
   end
@@ -80,7 +83,8 @@ class App
     person_to_add = @person_arr[person_id.to_i]
     printf 'Date:'
     date_to_add = gets.chomp
-    @rental_arr.push({ 'date' => date_to_add, 'book' => book_to_add, 'person' => person_to_add })
+    my_hash_two = { 'date' => date_to_add, 'book' => book_to_add, 'person' => person_to_add }
+    @rental_arr.push(my_hash_two)
     puts 'Rental created successfuly'
     puts ' '
   end
