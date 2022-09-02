@@ -20,7 +20,7 @@ class App
     permission = gets.chomp
     true_permission = permission == 'y' || 'yes' || 'Y'
     puts "Name: #{name} Age: #{age} created successfully"
-    the_hash = { 'id' => @id.to_s, 'name' => name, 'age' => age, 'profession' => 'Student' }
+    the_hash = { id: @id.to_s, name: name, age: age, profession: 'Student', permission: true_permission }
     @id += 1
     @person_arr.push(the_hash)
     Student.new('Year 1', age, name, 'Student', true_permission)
@@ -33,16 +33,23 @@ class App
     age = gets.chomp
     printf 'specialization:'
     specialization = gets.chomp
-    my_hash_one = { 'id' => @id.to_s, 'name' => name, 'age' => age, 'profession' => 'Teacher' }
+    my_hash_one = { id: @id.to_s, name: name, age: age, profession: 'Teacher' }
     @id += 1
     @person_arr.push(my_hash_one)
     Teacher.new(specialization, age, name, 'Teacher')
     puts "Name: #{name} specialzation:#{specialization} Age: #{age}  Added successfuly!"
   end
 
+  def list_books
+    @book_arr.each_with_index do |book, key|
+      puts "#{key}) Title: #{book[:title]}, Author: #{book[:author]}"
+    end
+    puts ' '
+  end
+
   def list_persons
     @person_arr.each_with_index do |perso, key|
-      puts "#{key}) [#{perso['profession']}] Name: #{perso['name']} ID: #{perso['id']} Age: #{perso['age']}"
+      puts "#{key}) [#{perso[:profession]}] Name: #{perso[:name]} ID: #{perso[:id]} Age: #{perso[:age]}"
     end
     puts ' '
   end
@@ -52,7 +59,7 @@ class App
     title = gets.chomp
     printf 'Author:'
     author = gets.chomp
-    my_hash = { 'title' => title, 'author' => author }
+    my_hash = { title: title, author: author }
     @book_arr.push(my_hash)
     puts 'Book created successfuly'
     puts ' '
@@ -83,7 +90,7 @@ class App
     person_to_add = @person_arr[person_id.to_i]
     printf 'Date:'
     date_to_add = gets.chomp
-    my_hash_two = { 'date' => date_to_add, 'book' => book_to_add, 'person' => person_to_add }
+    my_hash_two = { date: date_to_add, book: book_to_add, person: person_to_add }
     @rental_arr.push(my_hash_two)
     puts 'Rental created successfuly'
     puts ' '
@@ -93,11 +100,11 @@ class App
     puts 'Enter a person Id to see he\'s rentals'
     printf 'Id:'
     id = gets.chomp
-    find_rentals = @rental_arr.select { |rental| rental['person']['id'] == id }
+    find_rentals = @rental_arr.select { |rental| rental[:person][:id] == id }
     puts 'Rentals:'
     find_rentals.each_with_index do |rental, idx|
-      puts "#{idx + 1}) Name: #{rental['person']['name']},
-        Book: #{rental['book']['title']} Date: #{rental['date']}"
+      puts "#{idx + 1}) Name: #{rental[:person][:name]},
+        Book: #{rental[:book][:title]} Date: #{rental[:date]}"
     end
     puts ' '
   end
