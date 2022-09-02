@@ -5,6 +5,8 @@ class App
     @book_arr = []
     @person_arr = []
     @rental_arr = []
+    @books_list = []
+    @persons_list = []
     @id = 0
   end
 
