@@ -1,7 +1,4 @@
-require_relative 'person'
-require_relative 'classroom'
-require_relative 'student'
-require_relative 'teacher'
+require 'json'
 
 class App
   def initialize
