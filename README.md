@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # OOP school library project
 
 > The app that we will create will allow us to Add new students or teachers, Add new books and Save records of who borrowed a given book and when. And all of this will be built in a beautiful and well-organized way!
