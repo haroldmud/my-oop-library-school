@@ -8,7 +8,12 @@
 - Ruby
 
 
-## Authors
+
+![image](https://user-images.githubusercontent.com/12745474/188107321-eb62b379-c397-487f-8376-a8ef848355b0.png)
+
+![image](https://user-images.githubusercontent.com/12745474/188107489-54ddbe8e-b7ba-4132-b130-dd99d75c0877.png)
+
+
 
 👤 **Author1**
 
